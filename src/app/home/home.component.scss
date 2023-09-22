@@ -1,0 +1,18 @@
+.homecss{
+    background-color: rgb(236, 68, 22);
+}
+
+$btnColor: red;
+.home{
+    border: 1px solid $btnColor;
+}
+
+button{
+    background-color: $btnColor;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}

@@ -1,0 +1,38 @@
+<p>contact works!</p>
+
+<div class="contact">
+    <!-- <p class="homecss">home works!</p> -->
+    <ng-container *ngTemplateOutlet="copyright"></ng-container>
+    <ng-content></ng-content>
+
+    <p>Title is: {{title}}</p>
+    <p>text is : {{stext}}</p>
+
+    <p *ngIf="isHide; else showTemp">{{stext}}</p>
+    <ng-template #showTemp>
+        <p>Updated</p>
+    </ng-template>
+
+    <!-- <p *ngIf="!isHide">Updated</p> -->
+    <button (click)="onChange()">Update</button>
+    <br>
+    <ng-container *ngTemplateOutlet="copyright"></ng-container>
+
+</div>
+
+<ng-template #copyright><span>Hello from contact ng-template</span></ng-template>
+
+<ng-container *ngIf="showContact">
+    <div *ngFor="let item of contactData">
+        <p>item.title, item.stext</p>
+        <!-- <app-home [title]="item.title" [stext]="item.stext">
+            <h3>lksjdflasjl</h3>
+        </app-home> -->
+    </div>
+</ng-container>
+
+<!-- <p>Title is: {{title}}</p>
+<p>text is : {{stext}}</p> -->
+<!-- <p *ngIf="isHide">Need to update</p> -->
+
+<!-- <button (click)="onChange()">Update</button> -->

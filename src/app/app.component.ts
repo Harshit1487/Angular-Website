@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'website';
+  title = 'website';//property
+  contactTitle:string = "contact title from app";
+  onUpdate(data:any){
+    this.contactTitle = data;
+  }
+
 }

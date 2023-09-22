@@ -1,0 +1,21 @@
+<p>task works!</p>
+
+<table>
+    <thead>
+        <tr>
+        <th>Product Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let item of product; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.quantity}}</td>
+        </tr>
+    </tbody>
+</table>
